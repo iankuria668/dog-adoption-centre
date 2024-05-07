@@ -3,7 +3,7 @@ import YourAdoptedDogs from "./YourAdoptedDogs";
 function DogCollection() {
     // Declacing states
     const [dogs, setDogs] = useState([]);
-    const [adopteddogs, setAdoptedDogs] = useState([]);
+    const [adoptedDogs, setAdoptedDogs] = useState([]);
 
     // Fetching data from the API
     useEffect(() => {
@@ -23,18 +23,23 @@ function DogCollection() {
     //Event Listener for the Adopt a dog button
     const HandleAdopt = (event) => {
         event.preventDefault();
-        setAdoptedDogs([...adopteddogs, event.target.id]);
+        setAdoptedDogs([...adoptedDogs, event.target.id]);
     }
 
     return (
         <div>
+            <div>
+                <YourAdoptedDogs adoptedDogs = {adoptedDogs}/>
+            </div>
             <h1>Choose your lovely Companion</h1>
             {dogs ? (
                 <div className="dog-collection">
                     {dogs.map((dog) => (
                         // Returning a single division for each dog
                         <div className="dog-card" key={dog.id}>
-                            <img src={dog.image.url} alt={dog.name} />
+                            <img 
+                            src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
+                            alt={dog.name} />
                             <h3>{dog.name}</h3>
                             <p>{dog.temperament}</p>
                             <button
@@ -53,3 +58,4 @@ function DogCollection() {
     );
 
 }
+export default DogCollection;
