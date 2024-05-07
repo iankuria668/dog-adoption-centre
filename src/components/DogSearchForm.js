@@ -92,7 +92,7 @@ function DogSearchForm() {
                         <p>{breed.temperament}</p>
                         <img src={`https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`} alt={breed.name} />
                         <button className="button" onClick={() => handleViewDetails(breed)}>View Details</button>
-                        <button className="button" onClick={() => console.log("Dog adopted!")}>Adopt</button>
+                        <button className=" button" onClick={() => console.log("Dog adopted!")}>Adopt</button>
                     </div>
                 ))}
             </div>
