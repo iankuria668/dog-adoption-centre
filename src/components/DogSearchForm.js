@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function DogSearchForm() {
     // State to store user input and search results
@@ -26,6 +26,38 @@ function DogSearchForm() {
         setQuery(event.target.value); 
     };
 
+    // Function to fetch image URL for a specific breed
+    const fetchImageURL = async (imageId) => {
+        try {
+            const response = await fetch(`https://api.thedogapi.com/v1/images/${imageId}`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const imageData = await response.json();
+            return imageData.url;
+        } catch (error) {
+            console.error('Error fetching image URL:', error);
+            return ''; // Return empty string in case of error
+        }
+    };
+
+    useEffect(() => {
+        // Define an async function to fetch image URLs for all breeds
+        const fetchBreedsData = async () => {
+            const breedsData = [];
+            for (const breed of breeds) {
+                const imageURL = await fetchImageURL(breed.reference_image_id);
+                breedsData.push({ ...breed, imageURL }); // Include imageURL in breed data
+            }
+            setBreeds(breedsData); // Update breeds state with the new data
+        };
+
+        // Check if there are breeds to fetch images for
+        if (breeds.length > 0) {
+            fetchBreedsData(); // Fetch image URLs for breeds
+        }
+    }, [breeds]); // Trigger effect whenever breeds state changes
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -39,6 +71,15 @@ function DogSearchForm() {
                 />
                 <button type="submit">Search</button>
             </form>
+            <div className="dog-container">
+                {breeds.map((breed) => (
+                    <div key={breed.id} className="dog-card">
+                        <h3>{breed.name}</h3>
+                        <p>{breed.temperament}</p>
+                        <img src={breed.imageURL} alt={breed.name} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

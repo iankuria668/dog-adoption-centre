@@ -3,8 +3,8 @@ import DogSearchForm from "./DogSearchForm";
 function Home(){
     return (
         <div>
-            <DogCollection/>
             <DogSearchForm />
+            <DogCollection/>
         </div>
     )
 }
