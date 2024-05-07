@@ -21,5 +21,10 @@ function DogSearchForm() {
         }
     };
 
+    // Function to handle input change
+    const handleChange = (event) => {
+        setQuery(event.target.value); 
+    };
+
 
 export default DogSearchForm;
