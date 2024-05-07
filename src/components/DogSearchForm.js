@@ -26,5 +26,21 @@ function DogSearchForm() {
         setQuery(event.target.value); 
     };
 
+    return (
+        <div>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="search">Search Dog Breeds:</label>
+                <input
+                    type="text"
+                    id="search"
+                    value={query}
+                    onChange={handleChange}
+                    placeholder="Enter a breed name"
+                />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    );
+}
 
 export default DogSearchForm;
