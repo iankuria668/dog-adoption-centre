@@ -15,3 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  height: 10%;
+}
+footer{
+  background-color: #282c34;
+  padding-bottom: 80%;
+  font-size:xx-large;
+}
+main{
+  padding-top: 20%;
+  font-size:xx-large;
+}
