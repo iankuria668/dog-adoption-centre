@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import YourAdoptedDogs from "./YourAdoptedDogs";
 function DogCollection() {
-    // Declacing states
+    // Declaring states
     const [dogs, setDogs] = useState([]);
     const [adoptedDogs, setAdoptedDogs] = useState([]);
 

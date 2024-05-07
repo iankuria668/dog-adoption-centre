@@ -7,7 +7,7 @@ function DogSearchForm() {
 
     // Function to handle form submission
     const handleSubmit = async (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
+        event.preventDefault(); 
         try {
             // Make a GET request to the Dog API with the user's query
             const response = await fetch(`https://api.thedogapi.com/v1/breeds/search?q=${query}`);
@@ -42,19 +42,19 @@ function DogSearchForm() {
     };
 
     useEffect(() => {
-        // Define an async function to fetch image URLs for all breeds
+        // Function to fetch image URLs for all breeds
         const fetchBreedsData = async () => {
             const breedsData = [];
             for (const breed of breeds) {
                 const imageURL = await fetchImageURL(breed.reference_image_id);
                 breedsData.push({ ...breed, imageURL }); // Include imageURL in breed data
             }
-            setBreeds(breedsData); // Update breeds state with the new data
+            setBreeds(breedsData);
         };
 
         // Check if there are breeds to fetch images for
         if (breeds.length > 0) {
-            fetchBreedsData(); // Fetch image URLs for breeds
+            fetchBreedsData();
         }
     }, [breeds]); // Trigger effect whenever breeds state changes
 
@@ -69,7 +69,6 @@ function DogSearchForm() {
                     onChange={handleChange}
                     placeholder="Enter a breed name"
                 />
-                <button type="submit">Search</button>
             </form>
             <div className="dog-container">
                 {breeds.map((breed) => (
