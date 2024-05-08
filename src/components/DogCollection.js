@@ -38,10 +38,10 @@ function DogCollection() {
     };
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
             {/* Render dog images */}
             {dogs.map((dog) => (
-                <div key={dog.id} className="bg-gray-800 text-white rounded-md shadow-md overflow-hidden">
+                <div key={dog.id} className="bg-slate-500 hover:bg-slate-700 text-white rounded-md shadow-md overflow-hidden">
                     {/* Dog image */}
                     <img 
                         src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
@@ -63,7 +63,7 @@ function DogCollection() {
                             </Link>
                             {/* Button to preview dog */}
                             <button 
-                                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-5 rounded"
                                 onClick={() => handleViewDetails(dog)}
                             >
                                 Preview Dog
