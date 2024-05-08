@@ -1,8 +1,7 @@
 // DogCollection.js
-
 import React, { useState, useEffect } from 'react';
-import DogDetailsPopup from './DogDetailsPopup';
 import { Link } from 'react-router-dom';
+import DogDetailsPopup from './DogDetailsPopup';
 
 function DogCollection() {
     const [dogs, setDogs] = useState([]);
@@ -28,39 +27,38 @@ function DogCollection() {
         setSelectedDog(null);
     };
 
-
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {/* Render dog images */}
             {dogs.map((dog) => (
-                <div key={dog.id} className="bg-white rounded-md shadow-md overflow-hidden">
+                <div key={dog.id} className="bg-gray-800 text-white rounded-md shadow-md overflow-hidden">
                     {/* Dog image */}
                     <img 
                         src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                         alt={dog.name}
-                        className="w-full h-80 object-cover" 
+                        className="w-full h-80 object-cover rounded-t-md" 
                     />
-                    {/* Buttons for adopting and viewing details */}
-                    <h1 className=" text-black flex justify-center text-xl font-bold"> Dog Name: {dog.name}</h1>
-                    {<p className=" text-black flex justify-center text-xl font-bold">Breed Group:  {dog.breed_group}</p> ||dog.breed_group } 
-
-                    <div className="flex justify-center mt-2">
-                        
-                        <Link
-                            to={`/dogs/${dog.name}`}
-                        >   
-                        <button 
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
-                        >
-                             Adopt details
-                        </button>
-                        </Link> 
-                        <button 
-                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                            onClick={() => handleViewDetails(dog)}
-                        >
-                            Preview Dog
-                        </button>
+                    <div className="p-4">
+                        {/* Dog name */}
+                        <h1 className="text-xl font-semibold mb-2">{dog.name}</h1>
+                        {/* Dog breed group */}
+                        <p className="text-gray-300 mb-2">Breed Group: {dog.breed_group}</p>
+                        {/* Buttons */}
+                        <div className="flex justify-center">
+                            {/* Link to adopt details */}
+                            <Link to={`/dogs/${dog.name}`}>
+                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                                    Adopt Details
+                                </button>
+                            </Link>
+                            {/* Button to preview dog */}
+                            <button 
+                                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                                onClick={() => handleViewDetails(dog)}
+                            >
+                                Preview Dog
+                            </button>
+                        </div>
                     </div>
                 </div>
             ))}

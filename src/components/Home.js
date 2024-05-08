@@ -10,7 +10,7 @@ function Home() {
       <header>
         <NavBar />
       </header>
-      <div className="container mx-auto py-8">
+      <div className="bg-gray-900 rounded-lg overflow-hidden shadow-md">
         <DogSearchForm />
         <DogCollection />
       </div>
