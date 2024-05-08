@@ -91,6 +91,9 @@ function About() {
             ))}
           </div>
         </div>
+        <br></br>
+          <br></br>
+          <br></br>
     <footer>
     <Footer />
     </footer>
