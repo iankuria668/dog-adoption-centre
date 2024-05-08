@@ -46,7 +46,7 @@ function About() {
   };
 
   return (
-  <div className="bg-gray-950	background-color: rgb(3 7 18);">
+  <div className="bg-gray-900 ">
     <header>
       <NavBar />
       </header>
@@ -72,12 +72,12 @@ function About() {
           <br></br>
           </div>
           <h1 className="text-transparent	color: transparent;"> rvcef </h1>
-          <div className="container mx-auto p-8 bg-gray-900	background-color: rgb(17 24 39); ">
+          <div className="container mx-auto p-8 bg-gray-800	background-color: rgb(17 24 39); ">
             <h1 className="text-center text-6xl	font-size: 8rem; line-height: 1; text-gray-400	--tw-text-opacity: 1; color: rgba(156, 163, 175, var(--tw-text-opacity))"> Contact Us </h1>
             <br></br>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
              {teamMembers.map((member, index) => (
-             <div key={index} className="bg-gray-800 p-6 rounded-md shadow-md flex flex-col items-center">
+             <div key={index} className="bg-zinc-800 shadow-slate-100 hover:shadow-black p-6 rounded-md shadow-md flex flex-col items-center">
                 <h2 className="text-xl font-semibold text-white">{member.name}</h2>
                 <p className="text-gray-400 mb-2">{member.title}</p>
                 <p className="text-gray-300 mb-4"><erm>"{member.bio}"</erm></p>
