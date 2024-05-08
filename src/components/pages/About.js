@@ -10,7 +10,7 @@ function About() {
   };
   // Create an array of Team members each with their set of data to be passed onto the card
   const teamMembers = [
-    //fill in your name, title, bio and email here. We can all use a common url of royal pets because it is the name of the company
+    //fill in your name, title, bio and email here. We can all use a common email of royal pets because it is the name of the company
     {
     name: "Bill Mageni",
     title: "CEO & Founder",
