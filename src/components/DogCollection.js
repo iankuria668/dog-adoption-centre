@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import DogDetailsPopup from './DogDetailsPopup';
+import { Link } from 'react-router-dom';
 
 function DogCollection() {
     const [dogs, setDogs] = useState([]);
@@ -27,10 +28,6 @@ function DogCollection() {
         setSelectedDog(null);
     };
 
-    // Function for the non-functional "Adopt" button
-    const handleAdopt = () => {
-        // No functionality needed
-    };
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -45,12 +42,15 @@ function DogCollection() {
                     />
                     {/* Buttons for adopting and viewing details */}
                     <div className="flex justify-center mt-2">
+                        <Link
+                            to={`/dogs/${dog.name}`}
+                        >   
                         <button 
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
-                            onClick={handleAdopt}
                         >
                             Adopt
                         </button>
+                        </Link> 
                         <button 
                             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                             onClick={() => handleViewDetails(dog)}

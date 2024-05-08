@@ -4,13 +4,14 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-gray-900 text-white ">
+      <div className=" container mx-44 px-0 pt-4 flex justify-between items-right  ">
         <div>
           <NavLink className="text-emerald-600 text-5xl font-bold "> THE ROYAL PETS</NavLink>
+          
         </div>
-        <div className="nav-elements">
-          <ul className="flex space-x-4">
+        <div className="nav-elements flex p-4 space-x-2">
+          <ul className="flex space-x-6">
             <li>
               <NavLink to="/" className="text-3xl font-bold" activeClassName="text-emerald-600">Home</NavLink>
             </li>
