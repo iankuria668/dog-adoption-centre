@@ -6,8 +6,8 @@ function NavBar() {
   return (
     <nav className="bg-gray-900 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="logo">
-          <NavLink to="/" className="text-3xl font-bold" activeClassName="text-emerald-600">THE ROYAL PETS</NavLink>
+        <div>
+          <NavLink className="text-emerald-600 text-5xl font-bold "> THE ROYAL PETS</NavLink>
         </div>
         <div className="nav-elements">
           <ul className="flex space-x-4">
