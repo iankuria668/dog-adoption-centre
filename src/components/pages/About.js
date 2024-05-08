@@ -29,8 +29,8 @@ function About() {
         <header>
           <NavBar />
         </header>
-        <div className="about-section">
-          // I have used Tailwind css here to style titles and paragraphs
+                   {/* I have used Tailwind css here to style titles and paragraphs */}
+<div className="about-section">
   <h1 className="text-9xl	font-size: 8rem; line-height: 1; text-gray-400	--tw-text-opacity: 1; color: rgba(156, 163, 175, var(--tw-text-opacity));">About Us Page</h1>
 <br></br>
 <br></br>
@@ -51,7 +51,7 @@ The Royal Pets believes that every dog deserves a second chance. We partner with
 
 <h2 className="text-5xl font-size: 8rem; line-height: 1;">Our Team: </h2>
         <div className="about-list">
-          //Create a card for each team member by mapping their data onto cards
+          {/* //Create a card for each team member by mapping their data onto cards */}
           {teamMembers.map((member) => ( 
             <div className="about-row" key={member.name}>
               <div className="about-column">
@@ -62,7 +62,7 @@ The Royal Pets believes that every dog deserves a second chance. We partner with
                     <p>{member.bio}</p>
                     <p>{member.email}</p>
                     <p>
-                      // create an onclick property so that when the button is clicked, the user is re-routed to mailto
+                      {/* // create an onclick property so that when the button is clicked, the user is re-routed to mailto */}
                       <button className="about-button" onClick={() => onClickMailtoHandler(member.email)}>
                         Contact
                       </button>
