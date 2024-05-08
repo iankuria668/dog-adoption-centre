@@ -12,12 +12,18 @@ function DogDetailsPopup({ dog, onClose }) {
                     </svg>
                 </button>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">{dog.name}</h2>
+                <img src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`} alt='{dog.name}' className="w-full mb-4" />
                 <p className="text-gray-700 mb-2"><strong>Breed ID:</strong> {dog.id}</p>
                 <p className="text-gray-700 mb-2"><strong>Breed reference ID:</strong> {dog.reference_image_id}</p>
                 <p className="text-gray-700 mb-2"><strong>Breed group:</strong> {dog.breed_group}</p>
                 <p className="text-gray-700 mb-2"><strong>Breed origin:</strong> {dog.origin}</p>
                 <p className="text-gray-700 mb-2"><strong>Breed life span:</strong> {dog.life_span}</p>
                 <p className="text-gray-700 mb-2"><strong>Breed temperament:</strong> {dog.temperament}</p>
+                <button 
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+                        >
+                            Adopt
+                        </button>
             </div>
         </div>
     );
