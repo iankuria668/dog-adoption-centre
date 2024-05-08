@@ -33,7 +33,7 @@ function DogSearchForm() {
           value={query}
           onChange={handleChange}
           placeholder="Enter a breed name"
-          className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:border-blue-500"
+          className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
         />
         <button type="submit" className="ml-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:bg-blue-600">
           Search
