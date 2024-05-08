@@ -5,15 +5,39 @@ function About() {
   const teamMembers = [
     {
       name: "Bill Mageni",
-      title: "CEO & Founder",
+      title: "Adoption Specialist",
       bio: "Experienced in veterinary and adoption services.",
       email: "bill.mageni@royalpets.com",
     },
     {
-      name: "Sarah Jones",
+      name: "Ian Kuria",
       title: "Adoption Specialist",
       bio: "Passionate about matching dogs with perfect families.",
       email: "sarah.jones@royalpets.com",
+    },
+    {
+      name: "Joel Langat",
+      title: "Adoption Specialist",
+      bio: "Experienced in veterinary and adoption services.",
+      email: "Joel.Langat@royalpets.com",
+    },
+    {
+      name: "Ted Muigai",
+      title: "Adoption Specialist",
+      bio: "Experienced in veterinary and adoption services.",
+      email: "Ted.Muigai@royalpets.com",
+    },
+    {
+      name: "Daniel Wanjohi",
+      title: "Adoption Specialist",
+      bio: "Experienced in veterinary and adoption services.",
+      email: "Daniel.Wanjohi@royalpets.com",
+    },
+    {
+      name: "Lee Mwangi",
+      title: "Adoption Specialistr",
+      bio: "Experienced in veterinary and adoption services.",
+      email: "Lee.Mwangi@royalpets.com",
     },
   ];
 
@@ -22,12 +46,12 @@ function About() {
   };
 
   return (
-  <div className="bg-black text-white">
+  <div className="">
     <header>
       <NavBar />
       </header>
-      <div className="about-section">
-        <h1 className="text-9xl	font-size: 8rem; line-height: 1; text-gray-400	--tw-text-opacity: 1; color: rgba(156, 163, 175, var(--tw-text-opacity));">About Us Page</h1>
+      <div className="about-section bg-black text-white">
+        <h1 className=" text-center text-9xl	font-size: 8rem; line-height: 1; text-gray-400	--tw-text-opacity: 1; color: rgba(156, 163, 175, var(--tw-text-opacity));">About Us </h1>
         <br></br>
         <br></br>
         <br></br>
@@ -43,8 +67,11 @@ function About() {
           <br></br>
           <p className="text-4xl	font-size: 2.25rem;line-height: 2.5rem;">Community Focus:</p><p className="text-center	text-align: center; text-xl	font-size: 1.25rem; line-height: 1.75rem;" >
             The Royal Pets believes that every dog deserves a second chance. We partner with shelters and rescues to find homes for homeless dogs. We also offer low-cost veterinary services, spay/neuter programs, and training resources for our community, promoting responsible pet ownership and a supportive environment for all dogs and their families.</p>
+          <br></br>
+          <br></br>
+          <br></br>
           </div>
-          <div className="container mx-auto p-8">
+          <div className="container mx-auto p-8 ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
              {teamMembers.map((member, index) => (
              <div key={index} className="bg-gray-800 p-6 rounded-md shadow-md flex flex-col items-center">
