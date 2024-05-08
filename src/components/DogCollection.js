@@ -41,7 +41,7 @@ function DogCollection() {
                     <img 
                         src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                         alt={dog.name}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-64 object-cover" // Increase height here
                     />
                     {/* Buttons for adopting and viewing details */}
                     <div className="flex justify-center mt-2">
