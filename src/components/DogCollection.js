@@ -38,7 +38,7 @@ function DogCollection() {
                     <img 
                         src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                         alt={dog.name}
-                        className="w-full h-64 object-cover" 
+                        className="w-full h-80 object-cover" 
                     />
                     {/* Buttons for adopting and viewing details */}
                     <h1 className=" text-black flex justify-center text-xl font-bold"> Dog Name: {dog.name}</h1>
