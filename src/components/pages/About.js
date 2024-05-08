@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import BillMageniImage from "./Members/_ (1).jpeg"; 
+import DanielWanjohiImage from "./Members/_ (1).jpeg"; 
 import IanKuriaImage from "./Members/_ (3).jpeg"; 
 import JoelLangatImage from "./Members/_ (4).jpeg";
 import TedMuigaiImage from "./Members/_ (5).jpeg";
-import DanielWanjohiImage from "./Members/_.jpeg";
+import BillMageniImage from "./Members/_.jpeg";
 import LeeMwangiImage from "./Members/Lexica - Black man wearing elegant cothes, close picture, masculine_.jpeg";
 
 
@@ -28,28 +28,28 @@ function About() {
     {
       name: "Joel Langat",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Matching rescued animals with loving homes since 2024.",
       email: "Joel.Langat@royalpets.com",
       image: JoelLangatImage
     },
     {
       name: "Ted Muigai",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Collaborating with shelters and rescues to create happy endings for pets.",
       email: "Ted.Muigai@royalpets.com",
       image: TedMuigaiImage,
     },
     {
       name: "Daniel Wanjohi",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Prioritizing transparency and education for responsible pet ownership.",
       email: "Daniel.Wanjohi@royalpets.com",
       image: DanielWanjohiImage,
     },
     {
       name: "Lee Mwangi",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Specializing in finding forever families for desired breeds.",
       email: "Lee.Mwangi@royalpets.com",
       image: LeeMwangiImage,
     },
@@ -94,7 +94,7 @@ function About() {
               </div>
               <h2 className="text-xl font-semibold text-white">{member.name}</h2>
               <p className="text-gray-400 mb-2">{member.title}</p>
-              <p className="text-gray-300 mb-4">{member.bio}</p>
+              <p className="text-gray-300 mb-4 italic">"{member.bio}"</p>
               <button
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
                 onClick={() => onClickMailtoHandler(member.email)}
