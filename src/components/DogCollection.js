@@ -1,11 +1,15 @@
-// DogCollection.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DogDetailsPopup from './DogDetailsPopup';
 
 function DogCollection() {
     const [dogs, setDogs] = useState([]);
-    const [selectedDog, setSelectedDog] = useState(null);
+    const [loading, setLoading] = useState(true); // State to track loading status
+    const [selectedDog, setSelectedDog] = useState(null); // Define selectedDog state
+    // Define handleClosePopup function
+    const handleClosePopup = () => {
+        setSelectedDog(null);
+    };
 
     useEffect(() => {
         fetch('https://api.thedogapi.com/v1/breeds')
@@ -13,18 +17,24 @@ function DogCollection() {
             .then(data => {
                 console.log('API Response:', data); 
                 setDogs(data);
+                setLoading(false); // Set loading to false when data is fetched
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
+                setLoading(false); // Set loading to false on error as well
             });
     }, []);
 
+    if (loading) {
+        return (
+            <div className="bg-gray-800 text-white min-h-screen flex items-center justify-center">
+                <p>Loading...</p>
+            </div>
+        );
+    }
+
     const handleViewDetails = (dog) => {
         setSelectedDog(dog);
-    };
-
-    const handleClosePopup = () => {
-        setSelectedDog(null);
     };
 
     return (

@@ -6,11 +6,11 @@ import NavBar from './NavBar';
 
 function Home() {
   return (
-    <div className="bg-gray-800 text-white">
+    <div className="bg-gray-800 text-white min-h-screen">
       <header>
         <NavBar />
       </header>
-      <div className="bg-gray-900 rounded-lg overflow-hidden shadow-md">
+      <div className="container mx-auto py-8">
         <DogSearchForm />
         <DogCollection />
       </div>
