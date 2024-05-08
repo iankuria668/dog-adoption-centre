@@ -12,31 +12,31 @@ function About() {
     {
       name: "Ian Kuria",
       title: "Adoption Specialist",
-      bio: "Passionate about matching dogs with perfect families.",
+      bio: "Matching rescued animals with loving homes since 2024.",
       email: "sarah.jones@royalpets.com",
     },
     {
       name: "Joel Langat",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Collaborating with shelters and rescues to create happy endings for pets.",
       email: "Joel.Langat@royalpets.com",
     },
     {
       name: "Ted Muigai",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: " Prioritizing transparency and education for responsible pet ownership.",
       email: "Ted.Muigai@royalpets.com",
     },
     {
       name: "Daniel Wanjohi",
       title: "Adoption Specialist",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Specializing in finding forever families for desired breeds.",
       email: "Daniel.Wanjohi@royalpets.com",
     },
     {
       name: "Lee Mwangi",
       title: "Adoption Specialistr",
-      bio: "Experienced in veterinary and adoption services.",
+      bio: "Ensuring the best pet for you beacause,the right Mutt matters.",
       email: "Lee.Mwangi@royalpets.com",
     },
   ];
@@ -80,7 +80,7 @@ function About() {
              <div key={index} className="bg-gray-800 p-6 rounded-md shadow-md flex flex-col items-center">
                 <h2 className="text-xl font-semibold text-white">{member.name}</h2>
                 <p className="text-gray-400 mb-2">{member.title}</p>
-                <p className="text-gray-300 mb-4">{member.bio}</p>
+                <p className="text-gray-300 mb-4"><erm>"{member.bio}"</erm></p>
                 <button
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
                 onClick={() => onClickMailtoHandler(member.email)}
