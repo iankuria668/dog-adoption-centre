@@ -12,7 +12,7 @@ function DogCollection() {
         fetch('https://api.thedogapi.com/v1/breeds')
             .then(res => res.json())
             .then(data => {
-                console.log('API Response:', data); // Log API response to console
+                console.log('API Response:', data); 
                 setDogs(data);
             })
             .catch(error => {
@@ -38,24 +38,26 @@ function DogCollection() {
                     <img 
                         src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                         alt={dog.name}
-                        className="w-full h-64 object-cover" // Increase height here
+                        className="w-full h-64 object-cover" 
                     />
                     {/* Buttons for adopting and viewing details */}
+                    <h1 className=" text-black flex justify-center text-3xl font-bold"> {dog.name}</h1>
                     <div className="flex justify-center mt-2">
+                        
                         <Link
                             to={`/dogs/${dog.name}`}
                         >   
                         <button 
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
                         >
-                            Adopt
+                             Adopt details
                         </button>
                         </Link> 
                         <button 
                             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                             onClick={() => handleViewDetails(dog)}
                         >
-                            View Details
+                            Preview Dog
                         </button>
                     </div>
                 </div>
