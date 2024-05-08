@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import "./NavBar.css"
+import "./logo.png"
 
 
 function NavBar(){
@@ -10,9 +12,10 @@ function NavBar(){
                 </div>
                 <div  className="nav-elements">
                     <ul>
-                        <li className="logo-dog">
-                        <img  src = "./logo.jpg" alt = "Dog Icon "></img>
+                        <li className="text-emerald-600 text-5xl font-bold">
+                            THE ROYAL PETS
                         </li>
+                        
                         <li>
                         <NavLink 
                         to="/" 
@@ -30,8 +33,12 @@ function NavBar(){
                         to="/Contact"
                         >Contact Us
                         </NavLink>
-                        
                         </li>
+                        <li>
+                        <Link to={"https://api.thedogapi.com/v1/breeds/"}>The Dog API</Link>
+                        </li>
+                        <li>More Pages</li>
+                        <li>And More Pages</li>
                     </ul>
                 </div>
             </div>

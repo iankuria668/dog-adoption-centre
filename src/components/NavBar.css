@@ -27,12 +27,15 @@ body {
 }
 
 .nav-elements {
+  display: flex;
 }
 
 .nav-elements ul {
   display: flex;
   list-style-type: none;
-  
+  flex: 1;
+  overflow-x: auto;
+  white-space: nowrap; 
 }
 
 .nav-elements ul li:not(:last-child) {
@@ -62,6 +65,8 @@ body {
   height: 2px;
   background-color: #574c4c;
 }
-.logo-dog{
-  overflow: hidden; border-radius: 50%; 
+
+.agency-name{
+  font-size:xx-large
 }
+
