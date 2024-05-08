@@ -41,7 +41,9 @@ function DogCollection() {
                         className="w-full h-64 object-cover" 
                     />
                     {/* Buttons for adopting and viewing details */}
-                    <h1 className=" text-black flex justify-center text-3xl font-bold"> {dog.name}</h1>
+                    <h1 className=" text-black flex justify-center text-xl font-bold"> Dog Name: {dog.name}</h1>
+                    {<p className=" text-black flex justify-center text-xl font-bold">Breed Group:  {dog.breed_group}</p> ||dog.breed_group } 
+
                     <div className="flex justify-center mt-2">
                         
                         <Link
