@@ -53,7 +53,10 @@ function DogSearchForm() {
           Search
         </button>
       </div>
-      {/* Display breed suggestions as cards */}
+      {/* Display breed suggestions or "not found" message */}
+      {(query !== '' && suggestions.length === 0) && (
+        <div className="mt-4 text-red-500">Sorry, the dog breed "{query}" is not found.</div>
+      )}
       {suggestions.length > 0 && (
         <div className="mt-2 grid grid-cols-3 gap-4">
           {suggestions.map((breed) => (
