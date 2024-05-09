@@ -22,7 +22,7 @@ function SingleDog() {
   };
 
   const onClickMailtoHandler = () => {
-    window.location.href = `mailto:Bill.Mageni.Support@royalpets.com?subject=Adoption Request - ${formData.firstName}  ${formData.lastName} `; 
+    window.location.href = `mailto:${formData.email}?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0A%0A(Optional: You can add additional details here)`;
   };
 
   const handleSubmit = (event) => {
@@ -39,8 +39,8 @@ function SingleDog() {
     setFormData({
       firstName: '',
       lastName: '',
-      quantity: 1,
       adoptionDate: '',
+      email:'',
     });
   };
 
@@ -100,6 +100,7 @@ function SingleDog() {
                   type="text"
                   id="firstName"
                   name="firstName"
+                  placeholder='First Name...'
                   className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
                   value={formData.firstName}
                   onChange={handleChange}
@@ -111,21 +112,23 @@ function SingleDog() {
                   type="text"
                   id="lastName"
                   name="lastName"
+                  placeholder='Last Name...'
                   className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
                   value={formData.lastName}
                   onChange={handleChange}
                   required
                 />
                 <br />
-                <label htmlFor="quantity">Quantity:</label>
+                <label htmlFor="email">Email Address:</label>
                 <input
-                  type="number"
-                  id="quantity"
-                  name="quantity"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder='example@gmail.com'
                   className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
-                  value={formData.quantity}
+                  value={formData.email}
                   onChange={handleChange}
-                  min="1" // Set minimum quantity to 1
+                  required
                 />
                 <br />
                 <label 
@@ -149,7 +152,7 @@ function SingleDog() {
     <hr className='h-px my-3 bg-gray-200 border-0 mt-3 dark:bg-gray-700'></hr>
     <p className="text-xl text-zinc-950">First Name: {formData.firstName}</p>
     <p className="text-xl text-zinc-950">Last Name: {formData.lastName}</p>
-    <p className="text-xl text-zinc-950">Quantity: {formData.quantity}</p>
+    <p className="text-xl text-zinc-950">Email address: {formData.email}</p>
     <p className="text-xl text-zinc-950">Adoption Date: {formData.adoptionDate}</p>
     <p className="text-xl text-zinc-950">Dog Name: {name}</p>
     <div className="flex justify-end mt-4">

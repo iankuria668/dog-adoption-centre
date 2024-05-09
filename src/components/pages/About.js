@@ -55,7 +55,7 @@ function About() {
   ];
 
   const onClickMailtoHandler = (email) => {
-    window.location.href = `mailto:${email}`;
+    window.location.href = `mailto:${email}?subject= Support Assitance -`;
   };
 
   return (
@@ -74,7 +74,7 @@ function About() {
           <br></br>
           <br></br>
           <p className=" text-center	text-align: center; text-4xl	font-size: 2.25rem;line-height: 2.5rem;">Specific Breed Focus:</p><p className="text-center	text-align: center; text-xl	font-size: 1.25rem; line-height: 1.75rem; text-justify	text-align: justify; " >
-          The Royal Pets is dedicated to rescuing and rehoming Labrador Retrievers. We are passionate about finding loving families for these wonderful dogs and ensuring they thrive in their forever homes. Through responsible adoption practices and education, we advocate for the well-being of all Labradors in need.</p>
+          The Royal Pets is dedicated to rescuing and rehoming your spesific breed of dogs. We are passionate about finding loving families for these wonderful dogs and ensuring they thrive in their forever homes. Through responsible adoption practices and education, we advocate for the well-being of all Labradors in need.</p>
           <br></br>
           <br></br>
           <br></br>
