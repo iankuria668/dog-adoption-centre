@@ -30,7 +30,6 @@ function DogSearchForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // Implement your form submission logic here
   };
 
   const handleChange = (event) => {
