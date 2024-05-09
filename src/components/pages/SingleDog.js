@@ -131,9 +131,9 @@ function SingleDog() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="number">Phone Number:</label>
+                <label htmlFor="phoneNumber">Phone Number:</label>
                 <input
-                  type="text"
+                  type="number"
                   id="number"
                   name="number"
                   placeholder='07......'
@@ -165,6 +165,7 @@ function SingleDog() {
     <p className="text-xl text-zinc-950">First Name: {formData.firstName}</p>
     <p className="text-xl text-zinc-950">Last Name: {formData.lastName}</p>
     <p className="text-xl text-zinc-950">Email address: {formData.email}</p>
+    <p className="text-xl text-zinc-950">Phone Number: {formData.phoneNumber}</p>
     <p className="text-xl text-zinc-950">Adoption Date: {formData.adoptionDate}</p>
     <p className="text-xl text-zinc-950">Dog Name: {name}</p>
     <div className="flex justify-end mt-4">
