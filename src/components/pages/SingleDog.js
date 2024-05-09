@@ -22,7 +22,7 @@ function SingleDog() {
   };
 
   const onClickMailtoHandler = () => {
-    window.location.href = `mailto:maureen.murimi@moringaschool.com?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0APhone Number: ${formData.phoneNumber}%0AEmail Adress: ${formData.email}%0A%0A(Optional:Add additional personal details and something about yourself!)`;
+    window.location.href = `mailto:maureen.murimi@moringaschool.com?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0Adoption Date: ${formData.adoptionDate}%0A%0A(Optional:Add additional personal details and something about yourself!)`;
   };
 
   const handleSubmit = (event) => {
@@ -41,7 +41,6 @@ function SingleDog() {
       lastName: '',
       adoptionDate: '',
       email:'',
-      phoneNumber:'',
     });
   };
 
@@ -131,17 +130,6 @@ function SingleDog() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="phoneNumber">Phone Number:</label>
-                <input
-                  type="number"
-                  id="number"
-                  name="number"
-                  placeholder='07......'
-                  className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  required
-                />
                 <br />
                 <label 
                 htmlFor="adoptionDate">Adoption Date:
@@ -165,7 +153,6 @@ function SingleDog() {
     <p className="text-xl text-zinc-950">First Name: {formData.firstName}</p>
     <p className="text-xl text-zinc-950">Last Name: {formData.lastName}</p>
     <p className="text-xl text-zinc-950">Email address: {formData.email}</p>
-    <p className="text-xl text-zinc-950">Phone Number: {formData.phoneNumber}</p>
     <p className="text-xl text-zinc-950">Adoption Date: {formData.adoptionDate}</p>
     <p className="text-xl text-zinc-950">Dog Name: {name}</p>
     <div className="flex justify-end mt-4">
