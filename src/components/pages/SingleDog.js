@@ -22,7 +22,7 @@ function SingleDog() {
   };
 
   const onClickMailtoHandler = () => {
-    window.location.href = `mailto:maureen.murimi@moringaschool.com?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0Adoption Date: ${formData.adoptionDate}%0A%0A(Optional:Add additional personal details and something about yourself!)`;
+    window.location.href = `mailto:maureen.murimi@moringaschool.com?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0AAdoption Date: ${formData.adoptionDate}%0A%0A(Optional:Add additional personal details and something about yourself!)`;
   };
 
   const handleSubmit = (event) => {
