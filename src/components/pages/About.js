@@ -1,12 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import  DanielWanjohiImage from "./Members/_ (1).jpeg"; 
-import IanKuriaImage from "./Members/_ (3).jpeg"; 
-import JoelLangatImage from "./Members/_ (4).jpeg";
-import TedMuigaiImage from "./Members/_ (5).jpeg";
-import  BillMageniImage from "./Members/_.jpeg";
-import LeeMwangiImage from "./Members/Lexica - Black man wearing elegant cothes, close picture, masculine_.jpeg";
 
 function About() {
   const teamMembers = [
@@ -15,42 +9,36 @@ function About() {
       title: "Adoption Specialist",
       bio: "Experienced in veterinary and adoption services.",
       email: "bill.mageni@royalpets.com",
-      image: BillMageniImage,
     },
     {
       name: "Ian Kuria",
       title: "Adoption Specialist",
       bio: "Matching rescued animals with loving homes since 2024.",
       email: "sarah.jones@royalpets.com",
-      image: IanKuriaImage,
     },
     {
       name: "Joel Langat",
       title: "Adoption Specialist",
       bio: "Collaborating with shelters and rescues to create happy endings for pets.",
       email: "Joel.Langat@royalpets.com",
-      image: JoelLangatImage,
     },
     {
       name: "Ted Muigai",
       title: "Adoption Specialist",
       bio: " Prioritizing transparency and education for responsible pet ownership.",
       email: "Ted.Muigai@royalpets.com",
-      image: TedMuigaiImage,
     },
     {
       name: "Daniel Wanjohi",
       title: "Adoption Specialist",
       bio: "Specializing in finding forever families for desired breeds.",
       email: "Daniel.Wanjohi@royalpets.com",
-      image: DanielWanjohiImage,
     },
     {
       name: "Lee Mwangi",
       title: "Adoption Specialistr",
       bio: "Ensuring the best pet for you beacause,the right Mutt matters.",
       email: "Lee.Mwangi@royalpets.com",
-      image: LeeMwangiImage,
     },
   ];
 
@@ -91,9 +79,7 @@ function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
              {teamMembers.map((member, index) => (
              <div key={index} className=" bg-zinc-800 shadow-slate-100 hover:shadow-black p-6 rounded-md shadow-md flex flex-col items-center">
-              <div className="  aspect-square overflow-hidden rounded-lg mb-5">
-                <img src={member.image} alt={member.name} className="w-full h-full object-contain" /> {/* Team member's image */}
-              </div>
+              <div className="  aspect-square overflow-hidden rounded-lg mb-5"> </div>
                 <h2 className="text-xl font-semibold text-white">{member.name}</h2>
                 <p className="text-gray-400 mb-2">{member.title}</p>
                 <p className="text-gray-300 mb-4"><erm>"{member.bio}"</erm></p>
