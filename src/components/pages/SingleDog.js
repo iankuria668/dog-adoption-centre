@@ -22,7 +22,7 @@ function SingleDog() {
   };
 
   const onClickMailtoHandler = () => {
-    window.location.href = `mailto:Bill.Mageni.Support@royalpets.com?subject=Adoption Request - ${formData.firstName}  ${formData.lastName} `; // Replace with your actual email address and improve email body
+    window.location.href = `mailto:Bill.Mageni.Support@royalpets.com?subject=Adoption Request - ${formData.firstName}  ${formData.lastName} `; 
   };
 
   const handleSubmit = (event) => {
