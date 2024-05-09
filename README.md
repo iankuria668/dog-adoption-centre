@@ -1,23 +1,5 @@
 # THE ROYAL PETS
-<<<<<<< HEAD
-
-Group Leader: Ian Kuria  
-Group Members: Bill Mageni, Daniel Wanjohi, Joel Langat, Lee Mwangi, Ted Muigai
-
-## API Used
-
-Data to be used in the React page is obtained from this API: [The Dog API](https://api.thedogapi.com/v1/breeds)
-
-## Functionality
-
-### DogCollection.js
-
-The `DogCollection.js` component is responsible for displaying a collection of dog cards.
-
-**How it Works:**  
-To use the `DogCollection.js` component, import it into your project and render it within your application where you want to display a collection of dog cards.
-======
-#### Date, 2024/05/09
+#### Date, 2024/05/9
 ### Group Members: 
 #### Bill Mageni, Ian Kuria , Daniel Wanjohi ,   Joel Langat , Lee Mwangi,Ted Muigai
 
@@ -42,32 +24,13 @@ The DogSearchForm.js component is responsible for allowing users to search for d
 
 #### How it Works :
 To use the DogSearchForm.js component, import it into your project and render it within your application where you want to include a dog breed search form.
->>>>>>> c4bb41ceaa2958fcfa5a13af09b72c76cb1d9def
 
-### DogDetailsPopup.js
 
-<<<<<<< HEAD
-The `DogDetailsPopup.js` component is responsible for displaying details of a selected dog in a popup.
+## STYLING
+Tailwind.css , App.css , Index.css and DogSearch.css
+The above css files were used to style the react apllication to make it more user friendly.
 
-**How it Works:**  
-To use the `DogDetailsPopup.js` component, import it into your project and render it within your application where you want to display dog details in a popup.
 
-### DogSearchForm.js
-
-The `DogSearchForm.js` component is responsible for allowing users to search for dog breeds and display search results.
-
-**How it Works:**  
-To use the `DogSearchForm.js` component, import it into your project and render it within your application where you want to include a dog breed search form.
-
-## Styling
-
-- **Tailwind.css**
-- **App.css**
-- **Index.css**
-- **DogSearch.css**
-
-The above CSS files were used to style the React application to make it more user-friendly.
-======
 ## Response Format
 When a user opens the webpage, the fetch is:
 ```
@@ -149,7 +112,7 @@ https://thedogapi.com/
 ```
 
 
-### Lisences
+## Lisences
 MIT License
 
 Copyright (c)  GROUP 3 2024
@@ -171,4 +134,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
->>>>>>> c4bb41ceaa2958fcfa5a13af09b72c76cb1d9def
