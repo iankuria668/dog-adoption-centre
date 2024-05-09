@@ -16,7 +16,7 @@ The `DogCollection.js` component is responsible for displaying a collection of d
 
 **How it Works:**  
 To use the `DogCollection.js` component, import it into your project and render it within your application where you want to display a collection of dog cards.
-=======
+======
 #### Date, 2024/05/09
 ### Group Members: 
 #### Bill Mageni, Ian Kuria , Daniel Wanjohi ,   Joel Langat , Lee Mwangi,Ted Muigai
@@ -67,12 +67,7 @@ To use the `DogSearchForm.js` component, import it into your project and render 
 - **DogSearch.css**
 
 The above CSS files were used to style the React application to make it more user-friendly.
-=======
-## STYLING
-Tailwind.css , App.css , Index.css and DogSearch.css
-The above css files were used to style the react apllication to make it more user friendly.
-
-
+======
 ## Response Format
 When a user opens the webpage, the fetch is:
 ```
