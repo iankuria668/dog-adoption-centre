@@ -1,4 +1,3 @@
-// Home.js
 import React from 'react';
 import DogCollection from './DogCollection';
 import DogSearchForm from './DogSearchForm';
