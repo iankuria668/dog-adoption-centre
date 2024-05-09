@@ -1,7 +1,7 @@
 # THE ROYAL PETS
 #### Date, 2024/05/9
 ### Group Members: 
-#### Bill Mageni, Ian Kuria , Daniel Wanjohi ,   Joel Langat , Lee Mwangi,Ted Muigai
+####  Ian Kuria, Bill Mageni, Daniel Wanjohi ,   Joel Langat , Lee Mwangi,Ted Muigai
 
 #### API Used
 Data to be used in the react page is obtained from this API : https://api.thedogapi.com/v1/breeds
