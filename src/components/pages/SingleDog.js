@@ -22,7 +22,7 @@ function SingleDog() {
   };
 
   const onClickMailtoHandler = () => {
-    window.location.href = `mailto:${formData.email}?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0A%0A(Optional: You can add additional details here)`;
+    window.location.href = `mailto:maureen.murimi@moringaschool.com?subject=Adoption Request - ${formData.firstName} ${formData.lastName} &&body=Greetings.%0A%0AI would like to request an adoption of the ${name} pet.%0ABelow are my details:%0A%0AFirst Name: ${formData.firstName}%0ALast Name: ${formData.lastName}%0APhone Number: ${formData.phoneNumber}%0AEmail Adress: ${formData.email}%0A%0A(Optional:Add additional personal details and something about yourself!)`;
   };
 
   const handleSubmit = (event) => {
@@ -41,6 +41,7 @@ function SingleDog() {
       lastName: '',
       adoptionDate: '',
       email:'',
+      phoneNumber:'',
     });
   };
 
@@ -127,6 +128,17 @@ function SingleDog() {
                   placeholder='example@gmail.com'
                   className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
                   value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="number">Phone Number:</label>
+                <input
+                  type="text"
+                  id="number"
+                  name="number"
+                  placeholder='07......'
+                  className="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-blue-500 text-black font-serif"
+                  value={formData.phoneNumber}
                   onChange={handleChange}
                   required
                 />
