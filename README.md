@@ -149,7 +149,7 @@ https://thedogapi.com/
 ```
 
 
-## Lisences
+### Lisences
 MIT License
 
 Copyright (c)  GROUP 3 2024
