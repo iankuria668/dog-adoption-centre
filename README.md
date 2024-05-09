@@ -1,5 +1,5 @@
 # THE ROYAL PETS
-#### Date, 2024/05/9
+#### Date, 2024/05/09
 ### Group Members: 
 #### Bill Mageni, Ian Kuria , Daniel Wanjohi ,   Joel Langat , Lee Mwangi,Ted Muigai
 
