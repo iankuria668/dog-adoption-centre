@@ -30,10 +30,9 @@ function SingleDog() {
 
     const adoptionDetails = {
       ...formData,
-      dogName: name, // Include the dog's name for reference
+      dogName: name, 
     };
 
-    // Simulate sending adoption details to a server (replace with actual logic)
     console.log('Adoption Details:', adoptionDetails);
 
     // Clear the form after submission
@@ -143,8 +142,8 @@ function SingleDog() {
 <br />
 
 
-
-{formData.firstName && (
+{/* Conditonally render the adoption details  ONLY IF our first and last name are present*/}
+{formData.firstName && formData.lastName && (
   <div className="bg-gray-200 p-4 rounded shadow-md mt-8">
     <h2 className=" text-3xl font-bold text-black mb-5 lg:text-5xl">Adoption Details</h2>
     <hr className='h-px my-3 bg-gray-200 border-0 mt-3 dark:bg-gray-700'></hr>
